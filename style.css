@@ -1,0 +1,190 @@
+body{
+    margin: auto;
+}
+
+header{
+    text-align: center;
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        text-decoration: none;
+        margin: 0px 50px;
+        color:#0449B0;
+        transition: color 0.3s ease; 
+    }
+    a:hover{
+        color: #0449B0;
+        font-weight: bold; 
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:50px;
+
+}
+
+#describtion{
+    display: flex;
+    text-align: left;
+    p{
+        width: 400px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    img:last-child {
+        width: 100%; /* Розтягнення останнього зображення на всю ширину */
+        border-radius: 10px; /* Округлені кути для фото під логотипом */
+      }
+}
+
+#intern, #tv, #discounts,#payments, #response, #news{
+    display: flex;
+    flex-direction: row;
+}
+.television, .internet{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height:auto;
+    border-color: #0449B0;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0449B0;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px;
+}
+
+.television, .internet > * {
+    margin: 8px;
+    padding: 0%;
+}
+
+
+.television button, .internet button{
+    background-color: #0449B0;
+    color:aliceblue;
+    border-color: #0449B0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 8px;
+
+}
+
+#payments{
+    display:flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 50px;
+
+    input,select {
+        height: 24px;
+        width: 200px;
+        border-radius: 4px;
+        margin:8px;
+    }
+    label{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+}
+.news-card{
+    height: 240px;
+    width: 500px;
+    border: 1px solid  #0449B0;
+    border-radius: 8px;
+    padding: 12px;
+}
+.question{
+    display:flex;
+    flex-direction: column;
+    div{
+        display: flex;
+        flex-direction: row;
+    }
+    .group{
+        display:flex;
+        flex-direction: column;
+    }
+    input{
+        height: 24px;
+        width: 200px;
+        border-radius: 4px;
+        margin:8px;
+    }
+    label{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    button{
+        background-color: #0449B0;
+        color:aliceblue;
+        border-color: #0449B0;
+        padding: 8px 12px;
+        border-radius: 4px;
+        margin-left: 6px;
+
+    }
+    #quest{
+        width:auto;
+        height: 150px;
+        margin-left: 6px;
+    }
+}
+
+.taryf, .recom, .chanels, .old-price{
+    color:dimgrey;
+    font-size: small;
+    text-align: center;
+}
+.title, .price{
+    font-size: large;
+    font-weight: bold;
+    color: #0449B0;
+}
+#response{
+    margin-bottom: 50px;
+}
+.news-card{
+    margin: 8px;
+    width: 50%;
+    height:auto;
+    date{
+        font-size: small;
+    }
+}
+footer{
+    display: flex;
+    border: 1px solid #0449B0;
+    border-radius: 8px;
+    text-align: left;
+    margin: 0;
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        margin: 0px 50px;
+        color:#0449B0;
+        transition: color 0.3s ease; 
+    }
+    a:hover{
+        color: #0449B0;
+        font-weight: bold; 
+    }
+    
+}
+footer > *{
+    margin: 20px;
+}

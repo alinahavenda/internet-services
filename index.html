@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Інтернет-послуги Гавенда Аліна</title>
 </head>
 <body>
@@ -19,11 +20,14 @@
     </header>
     <main>
         <div id="describtion">
-            <img src="./image/logo.svg" width="300" height="60">
-            <p>Ваш надійний провайдер інтернету та телебачення. Швидке та надійне інтернет-з'єднання. Високоякісне телебачення улюбених каналів.</p>
+            <img src="./image/logo.svg" width="600" height="120">
+            <p>Ваш надійний провайдер інтернету та телебачення. <br> Швидке та надійне інтернет-з'єднання. <br> 
+                Високоякісне телебачення улюбених каналів.</p>
         </div>
-        <div id="internet">
-            <h2>Інтернет - послуги</h2>
+         <img src="./image/photo1.jpg" width="80%" height="600" style="margin-bottom: 50px;" >
+        
+         <h2>Інтернет - послуги</h2>
+        <div id="intern" style="margin-bottom: 50px">
             <div class="internet">
                 <p class="taryf">Тариф</p>
                 <p class="title">Швидкий</p>
@@ -57,8 +61,11 @@
                 <button>Підключити</button>
             </div>
         </div>
-        <div id="tv">
-            <div class="television">
+
+        <h2>Телебачення</h2>
+
+        <div id="tv" style="margin-bottom: 50px;">
+            <div class="television" >
                 <p class="taryf">Тариф</p>
                 <p class="title">HD</p>
                 <p class="count-ch">50 каналів</p>
@@ -91,13 +98,13 @@
                 <button>Підключити</button>
             </div>
         </div>
+        <h2>Цікаві пропозиції</h2>
         <div id="discounts">
-            <h2>Цікаві пропозиції</h2>
             <div class="internet">
                 <p class="taryf">Інтернет + Телебачення</p>
                 <p class="title">Швидкий + Преміум</p>
                 <p class="velocity">>100 Мбіт/с</p>
-                <p class="old-price">599 грн</p>
+                <p class="old-price"><s>599 грн</s></p>
                 <p class="price">299 грн</p>
                 <button>Підключити</button>
             </div>
@@ -105,7 +112,7 @@
                 <p class="taryf">Інтернет + Телебачення</p>
                 <p class="title">Швидкий + HD</p>
                 <p class="velocity">>100 Мбіт/с</p>
-                <p class="old-price">599 грн</p>
+                <p class="old-price"><s>599 грн</s></p>
                 <p class="price">299 грн</p>
                 <button>Підключити</button>
             </div>
@@ -113,7 +120,7 @@
                 <p class="taryf">Абонемент на інтернет-послуги</p>
                 <p class="title">Преміум на 6 місяців</p>
                 <p class="velocity">>100 Мбіт/с</p>
-                <p class="old-price">1199 грн</p>
+                <p class="old-price"><s>1199 грн</s></p>
                 <p class="price">799 грн</p>
                 <button>Підключити</button>
             </div>
@@ -122,89 +129,101 @@
                 <p class="title">HD на 6 місяців</p>
                 <p class="count-ch">50 каналів</p>
                 <p class="chanels">Всеукраїнські телеканали та National Geographic, Футбол+</p>
-                <p class="old-price">1199 грн</p>
+                <p class="old-price"><s>1199 грн</s></p>
                 <p class="price">799 грн</p>
                 <button>Підключити</button>
             </div>
         </div>
-        <div id="payments">
-            <h2>Оплата послуг</h2>
 
+
+
+        <h2>Оплата послуг</h2>
+        <div id="payments">
             <label for="subscriberNumber">Абонентський номер:</label>
             <input type="text" id="subscriberNumber" name="subscriberNumber" placeholder="Введіть абонентський номер">
-
-            <label for="serviceType">Оберіть послугу:</label>
-            <select id="serviceType" name="serviceType" onchange="updateOptions()">
-            <option value="internet">Інтернет</option>
-            <option value="tv">Телебачення</option>
-            </select>
-
-            <label for="subscriptionType">Оберіть тип підписки:</label>
-            <select id="subscriptionType" name="subscriptionType">
-            <!-- Опції для Інтернету -->
-            <optgroup label="Інтернет">
-                <option value="premium">Преміум</option>
-                <option value="fast">Швидкий</option>
-                <option value="starlink">Старлінк</option>
-                <option value="maximum">Максимум</option>
-            </optgroup>
-
-            <!-- Опції для Телебачення -->
-            <optgroup label="Телебачення">
-                <option value="hd">HD</option>
-                <option value="entertainment">Дозвілля</option>
-                <option value="sports">Спорт</option>
-                <option value="basic">Доступний</option>
-            </optgroup>
-            </select>
-
-            <label for="month">Кількість місяців</label>
-            <input type="number" id="month" name="month">
-            <label for="cardNumber">Номер картки:</label>
-            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
-            <button class="pay">Google Pay</button>
+                <label for="serviceType">Оберіть послугу:</label>
+                <select id="serviceType" name="serviceType" onchange="updateOptions()">
+                <option value="internet">Інтернет</option>
+                <option value="tv">Телебачення</option>
+                </select>
     
-
-            <script>
-                function updateOptions() {
-                    var serviceType = document.getElementById("serviceType");
-                    var subscriptionType = document.getElementById("subscriptionType");
-
-                    // Очищаємо поточний вміст другого списку
-                    subscriptionType.innerHTML = "";
-
-                    // Додаємо опції в залежності від обраної послуги
-                    if (serviceType.value === "internet") {
-                    subscriptionType.add(new Option("Преміум", "premium"));
-                    subscriptionType.add(new Option("Швидкий", "fast"));
-                    subscriptionType.add(new Option("Старлінк", "starlink"));
-                    subscriptionType.add(new Option("Максимум", "maximum"));
-                    } else if (serviceType.value === "tv") {
-                    subscriptionType.add(new Option("HD", "hd"));
-                    subscriptionType.add(new Option("Дозвілля", "entertainment"));
-                    subscriptionType.add(new Option("Спорт", "sports"));
-                    subscriptionType.add(new Option("Доступний", "basic"));
+                <label for="subscriptionType">Оберіть тип підписки:</label>
+                <select id="subscriptionType" name="subscriptionType">
+                <!-- Опції для Інтернету -->
+                <optgroup label="Інтернет">
+                    <option value="premium">Преміум</option>
+                    <option value="fast">Швидкий</option>
+                    <option value="starlink">Старлінк</option>
+                    <option value="maximum">Максимум</option>
+                </optgroup>
+    
+                <!-- Опції для Телебачення -->
+                <optgroup label="Телебачення">
+                    <option value="hd">HD</option>
+                    <option value="entertainment">Дозвілля</option>
+                    <option value="sports">Спорт</option>
+                    <option value="basic">Доступний</option>
+                </optgroup>
+                </select>
+    
+                <label for="month">Кількість місяців</label>
+                <input type="number" id="month" name="month" style="width: 50px">
+                <label for="cardNumber">Номер картки:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1111 2222 3333 4444">
+                <button style="background-color: white; width: 200px; margin: 8px; border-radius: 4px; padding: 8px 12px; ">Google Pay</button>
+        
+    
+                <script>
+                    function updateOptions() {
+                        var serviceType = document.getElementById("serviceType");
+                        var subscriptionType = document.getElementById("subscriptionType");
+    
+                        // Очищаємо поточний вміст другого списку
+                        subscriptionType.innerHTML = "";
+    
+                        // Додаємо опції в залежності від обраної послуги
+                        if (serviceType.value === "internet") {
+                        subscriptionType.add(new Option("Преміум", "premium"));
+                        subscriptionType.add(new Option("Швидкий", "fast"));
+                        subscriptionType.add(new Option("Старлінк", "starlink"));
+                        subscriptionType.add(new Option("Максимум", "maximum"));
+                        } else if (serviceType.value === "tv") {
+                        subscriptionType.add(new Option("HD", "hd"));
+                        subscriptionType.add(new Option("Дозвілля", "entertainment"));
+                        subscriptionType.add(new Option("Спорт", "sports"));
+                        subscriptionType.add(new Option("Доступний", "basic"));
+                        }
                     }
-                }
-            </script>
-
-
+                </script>
         </div>
+
+
+
+        <h2>Залишились запитання? Залиште контакти, і менеджер зв'яжеться з вами за 5 хвилин!</h2>
         <div id="response">
-            <h2>Залишились запитання? Залиште контакти, і менеджер зв'яжеться з вами за 5 хвилин!</h2>
             <form class="question">
-                <label for="name">Ім'я</label>
-                <input type="text" id="name" name="name">
-                <label for="tel">Номер телефону</label>
-                <input type="text" id="tel" name="tel">
+                <div>
+                    <div class="group">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="group">
+                        <label for="tel">Номер телефону</label>
+                        <input type="text" id="tel" name="tel">
+                    </div>
+                </div>
+                
                 <label for="quest">Ваше запитання:</label>
-                <input type="text" id="quest" name="quest">
+                <textarea type="text" id="quest" name="quest"></textarea>
                 <button>Відправити</button>
             </form>
         </div>
-        
+
+
+
+
+        <h2>Актуальні новини та сповіщення</h2>
         <div id="news">
-            <h2>Актуальні новини та сповіщення</h2>
             <div class="news-card">
                 <h3>Попередження про збій</h3>
                 <date>01.03.2024</date>
@@ -227,8 +246,7 @@
             <li><a href = "#discounts">Акції</a></li>
             <li><a href = "./teleprogram.html">Телепрограма</a></li>
         </ul>
-        <p>Ваш надійний провайдер.</p>
-        <p>2024</p>
+        <p>Ваш надійний провайдер.<br>2024</p>
     </footer>
 </body>
 </html>
