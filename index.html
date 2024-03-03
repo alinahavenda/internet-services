@@ -8,8 +8,9 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="./image/logo.svg" width="300" height="60"></a>
-        <ul>
+        <img src="./image/logo.svg" width="300" height="60">
+        
+        <ul class="menu">
             <li><a href = "#news">Новини</a></li>
             <li><a href = "#internet">Інтернет</a></li>
             <li><a href = "#tv">Телебачення</a></li>
@@ -17,13 +18,36 @@
             <li><a href = "#discounts">Акції</a></li>
             <li><a href = "./teleprogram.html">Телепрограма</a></li>
         </ul>
+        <div class="mobile-menu">
+            <button class="burger-toggle">&#9776;</button>
+            <ul class="mobile-menu-list">
+                <li><a href = "#news">Новини</a></li>
+                <li><a href = "#internet">Інтернет</a></li>
+                <li><a href = "#tv">Телебачення</a></li>
+                <li><a href = "#payments">Оплата</a></li>
+                <li><a href = "#discounts">Акції</a></li>
+                <li><a href = "./teleprogram.html">Телепрограма</a></li>
+            </ul>
+        </div>
+        <script>
+            const menuToggle = document.getElementById('burger-toggle');
+            const header = document.querySelector('.header');
+            const mobileMenu = header.querySelector('.mobile-menu-list');
+
+            menuToggle.addEventListener('click', () => {
+            mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+            });
+        </script>
     </header>
+
+
+
     <main>
-        <div id="describtion">
-            <img src="./image/logo.svg" width="600" height="120">
+        <section id="describtion">
+            <img src="./image/logo.svg" width="auto" height="120">
             <p>Ваш надійний провайдер інтернету та телебачення. <br> Швидке та надійне інтернет-з'єднання. <br> 
                 Високоякісне телебачення улюбених каналів.</p>
-        </div>
+            </section>
          <img src="./image/photo1.jpg" width="80%" height="600" style="margin-bottom: 50px;" >
         <h3>Переваги:</h3>
         <ol>
@@ -34,7 +58,7 @@
             <li> Сучасне обладнання</li>
             <li> Захист даних та конфіденційність</li>
         </ol>
-        <div class="prefer">
+        <section class="prefer">
             <h3>Яка послуга для вас наразі важливіша?</h3>
             
             <div class="radiobutton">
@@ -49,9 +73,9 @@
                 <input type="radio" id="bothr" name="services" value="both">
             <label for="bothr">Обидві послуги важливі</label>
             </div>
-        </div>
+        </section>
          <h2>Інтернет - послуги</h2>
-        <div id="intern" style="margin-bottom: 50px">
+        <section id="intern" style="margin-bottom: 50px">
             <div class="internet">
                 <p class="taryf">Тариф</p>
                 <p class="title">Швидкий</p>
@@ -84,11 +108,11 @@
                 <p class="price">199 грн/місяць</p>
                 <button>Підключити</button>
             </div>
-        </div>
+        </section>
 
         <h2>Телебачення</h2>
 
-        <div id="tv" style="margin-bottom: 50px;">
+        <section id="tv" style="margin-bottom: 50px;">
             <div class="internet" >
                 <p class="taryf">Тариф</p>
                 <p class="title">HD</p>
@@ -121,9 +145,9 @@
                 <p class="price">299 грн/місяць</p>
                 <button>Підключити</button>
             </div>
-        </div>
+        </section>
         <h2>Цікаві пропозиції</h2>
-        <div id="discounts">
+        <section id="discounts">
             <div class="internet">
                 <p class="taryf">Інтернет + Телебачення</p>
                 <p class="title">Швидкий + Преміум</p>
@@ -157,7 +181,7 @@
                 <p class="price">799 грн</p>
                 <button>Підключити</button>
             </div>
-        </div>
+        </section>
 
         
         
@@ -165,7 +189,7 @@
 
         <h2>Оплата послуг</h2>
         
-        <div id="payments">
+        <section id="payments">
             <div class="services">
                 <label for="serviceType">Оберіть послугу:</label>
                 <select id="serviceType" name="serviceType" onchange="updateOptions()">
@@ -219,20 +243,20 @@
 
             <div class="data">
                 <label for="subscriberNumber">Абонентський номер:</label>
-                <input type="text" id="subscriberNumber" name="subscriberNumber" placeholder="Введіть абонентський номер">
+                <input type="text" id="subscriberNumber" name="subscriberNumber" placeholder="Введіть абонентський номер" >
                 
                 <label for="month">Кількість місяців</label>
                 <input type="number" id="month" name="month" style="width: 50px">
                 <label for="cardNumber">Номер картки:</label>
                 <input type="text" id="cardNumber" name="cardNumber" placeholder="1111 2222 3333 4444">
-                <button style="background-color: white; width: 200px; margin: 8px; border-radius: 4px; padding: 28px 12px; border-color: aliceblue;"></button>
+                <button style="background-color: white; width: 100px; height: 30px; margin: 8px; border-radius: 4px; padding: 14px 12px; border-color: aliceblue;"></button>
             </div>
-        </div>
+        </section>
 
 
 
         <h2>Залишились запитання? Залиште контакти, і менеджер зв'яжеться з вами за 5 хвилин!</h2>
-        <div id="response">
+        <section id="response">
             <form class="question">
                 <div>
                     <div class="group">
@@ -249,13 +273,13 @@
                 <textarea type="text" id="quest" name="quest"></textarea>
                 <button>Відправити</button>
             </form>
-        </div>
+        </section>
 
 
 
 
         <h2>Актуальні новини та сповіщення</h2>
-        <div id="news" >
+        <section id="news" >
             <div class="news-card">
                 <h3>Попередження про збій</h3>
                 <date>01.03.2024</date>
@@ -266,7 +290,7 @@
                 <date>02.03.2024</date>
                 <p>Шановні абоненти! З 02.03.2024 по 12.03.2024 доступна акція 1+1=3: послуги на 3 місяці. Оплачуйте інтернет-послуги або телебачення за 2 місяці, та отримуйте 3 місяць послуг безкоштовно! Акція доступна для усіх тарифів.</p>
             </div>
-        </div>
+        </section>
     </main>
    
     <footer>

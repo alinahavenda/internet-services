@@ -1,6 +1,8 @@
 @charset "UTF-8";
 body {
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -35,10 +37,12 @@ main {
 #describtion {
   display: flex;
   text-align: left;
+  justify-content: center;
+  align-items: center;
 }
 #describtion p {
   width: auto;
-  height: auto;
+  height: 120px;
   justify-content: center;
   align-items: center;
 }
@@ -73,6 +77,15 @@ main {
   padding: 12px;
   margin: 8px;
 }
+.internet button {
+  background-color: #0449B0;
+  color: aliceblue;
+  border-color: #0449B0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 8px;
+  width: 60%;
+}
 
 .internet:hover {
   transform: scale(1.2); /* Збільшення на 20% при наведенні */
@@ -83,15 +96,6 @@ main {
   margin: 8px;
 }
 
-.internet button {
-  background-color: #0449B0;
-  color: aliceblue;
-  border-color: #0449B0;
-  padding: 8px 12px;
-  border-radius: 4px;
-  margin: 8px;
-}
-
 #payments {
   display: flex;
   flex-direction: row;
@@ -99,11 +103,18 @@ main {
   padding: 16px;
   margin-bottom: 50px;
 }
-#payments input, #payments select {
-  height: 24px;
+#payments select {
+  height: 36px;
   width: 200px;
   border-radius: 4px;
   margin: 8px;
+}
+#payments input {
+  height: 18px;
+  width: 200px;
+  border-radius: 4px;
+  margin: 8px;
+  padding: 6px;
 }
 #payments label {
   font-size: 14px;
@@ -113,6 +124,8 @@ main {
   background-image: url("./image/google-pay-svgrepo-com.svg");
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .news-card {
@@ -157,6 +170,7 @@ main {
   padding: 8px 12px;
   border-radius: 4px;
   margin-left: 6px;
+  width: 100%;
 }
 .question textarea {
   border-radius: 4px;
@@ -189,6 +203,7 @@ main {
   width: 50%;
   height: auto;
 }
+
 .news-card date {
   font-size: small;
 }
@@ -211,11 +226,18 @@ main {
 
 footer {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: #b6d2fd;
   border-radius: 8px;
   text-align: left;
   width: 100%;
   margin: 0;
+}
+footer img {
+  width: auto;
+  height: 60px;
 }
 footer ul {
   list-style: none;
@@ -233,6 +255,56 @@ footer a:hover {
 
 footer > * {
   margin: 20px;
+}
+
+.mobile-menu, .mobile-menu-list {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    min-width: 500px;
+    height: 50px;
+  }
+  header ul li {
+    display: block;
+  }
+  header .menu {
+    display: none;
+  }
+  header .mobile-menu {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  header .mobile-menu .mobile-menu-list {
+    display: block;
+    list-style-type: none;
+    text-align: left;
+    text-decoration: none;
+    width: fit-content;
+    background-color: white;
+  }
+  header .mobile-menu .mobile-menu-list li {
+    margin-bottom: 8px;
+    left: 20px;
+  }
+  header button {
+    background-color: #b6d2fd;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+  }
+  main img {
+    max-width: 80%;
+    height: auto;
+  }
+  #describtion {
+    margin-left: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
