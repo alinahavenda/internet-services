@@ -25,7 +25,31 @@
                 Високоякісне телебачення улюбених каналів.</p>
         </div>
          <img src="./image/photo1.jpg" width="80%" height="600" style="margin-bottom: 50px;" >
-        
+        <h3>Переваги:</h3>
+        <ol>
+            <li> Висока швидкість інтернет - з'єднання</li>
+            <li> Стабільне з'єднання</li>
+            <li> Різноманітність тарифів та часті акції</li>
+            <li> Якісне клієнтське обслуговування</li>
+            <li> Сучасне обладнання</li>
+            <li> Захист даних та конфіденційність</li>
+        </ol>
+        <div class="prefer">
+            <h3>Яка послуга для вас наразі важливіша?</h3>
+            
+            <div class="radiobutton">
+                <input type="radio" id="internetr" name="services" value="internet">
+            <label for="internetr">Інтернет</label>
+            </div>
+            <div class="radiobutton">
+                <input type="radio" id="tvr" name="services" value="tv">
+                <label for="tvr">Телебачення</label>
+            </div>
+            <div class="radiobutton">
+                <input type="radio" id="bothr" name="services" value="both">
+            <label for="bothr">Обидві послуги важливі</label>
+            </div>
+        </div>
          <h2>Інтернет - послуги</h2>
         <div id="intern" style="margin-bottom: 50px">
             <div class="internet">
@@ -65,7 +89,7 @@
         <h2>Телебачення</h2>
 
         <div id="tv" style="margin-bottom: 50px;">
-            <div class="television" >
+            <div class="internet" >
                 <p class="taryf">Тариф</p>
                 <p class="title">HD</p>
                 <p class="count-ch">50 каналів</p>
@@ -73,7 +97,7 @@
                 <p class="price">199 грн/місяць</p>
                 <button>Підключити</button>
             </div>
-            <div class="television">
+            <div class="internet">
                 <p class="taryf">Тариф</p>
                 <p class="title">Дозвілля</p>
                 <p class="count-ch">70 каналів</p>
@@ -81,7 +105,7 @@
                 <p class="price">249 грн/місяць</p>
                 <button>Підключити</button>
             </div>
-            <div class="television">
+            <div class="internet">
                 <p class="taryf">Тариф</p>
                 <p class="title">Спорт</p>
                 <p class="count-ch">70 каналів</p>
@@ -89,7 +113,7 @@
                 <p class="price">199 грн/місяць</p>
                 <button>Підключити</button>
             </div>
-            <div class="television">
+            <div class="internet">
                 <p class="taryf">Тариф</p>
                 <p class="title">Доступний</p>
                 <p class="count-ch">100 каналів</p>
@@ -124,7 +148,7 @@
                 <p class="price">799 грн</p>
                 <button>Підключити</button>
             </div>
-            <div class="television">
+            <div class="internet">
                 <p class="taryf">Абонемент на телебачення</p>
                 <p class="title">HD на 6 місяців</p>
                 <p class="count-ch">50 каналів</p>
@@ -135,12 +159,14 @@
             </div>
         </div>
 
+        
+        
 
 
         <h2>Оплата послуг</h2>
+        
         <div id="payments">
-            <label for="subscriberNumber">Абонентський номер:</label>
-            <input type="text" id="subscriberNumber" name="subscriberNumber" placeholder="Введіть абонентський номер">
+            <div class="services">
                 <label for="serviceType">Оберіть послугу:</label>
                 <select id="serviceType" name="serviceType" onchange="updateOptions()">
                 <option value="internet">Інтернет</option>
@@ -165,14 +191,7 @@
                     <option value="basic">Доступний</option>
                 </optgroup>
                 </select>
-    
-                <label for="month">Кількість місяців</label>
-                <input type="number" id="month" name="month" style="width: 50px">
-                <label for="cardNumber">Номер картки:</label>
-                <input type="text" id="cardNumber" name="cardNumber" placeholder="1111 2222 3333 4444">
-                <button style="background-color: white; width: 200px; margin: 8px; border-radius: 4px; padding: 8px 12px; ">Google Pay</button>
         
-    
                 <script>
                     function updateOptions() {
                         var serviceType = document.getElementById("serviceType");
@@ -195,6 +214,19 @@
                         }
                     }
                 </script>
+            </div>
+
+
+            <div class="data">
+                <label for="subscriberNumber">Абонентський номер:</label>
+                <input type="text" id="subscriberNumber" name="subscriberNumber" placeholder="Введіть абонентський номер">
+                
+                <label for="month">Кількість місяців</label>
+                <input type="number" id="month" name="month" style="width: 50px">
+                <label for="cardNumber">Номер картки:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1111 2222 3333 4444">
+                <button style="background-color: white; width: 200px; margin: 8px; border-radius: 4px; padding: 28px 12px; border-color: aliceblue;"></button>
+            </div>
         </div>
 
 
@@ -223,7 +255,7 @@
 
 
         <h2>Актуальні новини та сповіщення</h2>
-        <div id="news">
+        <div id="news" >
             <div class="news-card">
                 <h3>Попередження про збій</h3>
                 <date>01.03.2024</date>
@@ -236,6 +268,7 @@
             </div>
         </div>
     </main>
+   
     <footer>
         <a href="index.html"><img src="./image/logo.svg" width="300" height="60"></a>
         <ul>
