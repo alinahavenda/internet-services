@@ -19,7 +19,7 @@
             <li><a href = "./teleprogram.html">Телепрограма</a></li>
         </ul>
         <div class="mobile-menu">
-            <button class="burger-toggle">&#9776;</button>
+            <button id="burger-toggle" onclick="show()">&#9776;</button>
             <ul class="mobile-menu-list">
                 <li><a href = "#news">Новини</a></li>
                 <li><a href = "#internet">Інтернет</a></li>
@@ -29,23 +29,24 @@
                 <li><a href = "./teleprogram.html">Телепрограма</a></li>
             </ul>
         </div>
-        <script>
-            const menuToggle = document.getElementById('burger-toggle');
-            const header = document.querySelector('.header');
-            const mobileMenu = header.querySelector('.mobile-menu-list');
-
-            menuToggle.addEventListener('click', () => {
-            mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
-            });
-        </script>
     </header>
+    <script>
+         function show() {
+        const menuList = document.querySelector('.mobile-menu-list');
+        if (menuList.style.display === 'none') {
+          menuList.style.display = 'block';
+        } else {
+          menuList.style.display = 'none';
+        }
+      }
+    </script>
 
 
 
     <main>
         <section id="describtion">
             <img src="./image/logo.svg" width="auto" height="120">
-            <p>Ваш надійний провайдер інтернету та телебачення. <br> Швидке та надійне інтернет-з'єднання. <br> 
+            <p>Ваш надійний провайдер інтернету та телебачення. <br> <strong>Швидке та надійне інтернет-з'єднання.</strong> <br> 
                 Високоякісне телебачення улюбених каналів.</p>
             </section>
          <img src="./image/photo1.jpg" width="80%" height="600" style="margin-bottom: 50px;" >
@@ -103,7 +104,7 @@
             <div class="internet">
                 <p class="taryf">Тариф</p>
                 <p class="title">Максимум</p>
-                <p class="velocity">>100Мбіт/с</p>
+                <p class="velocity">&gt;100Мбіт/с</p>
                 <p class="recom">Рекомендовано для офісних приміщень або приміщень,  площею більше за 300м2</p>
                 <p class="price">199 грн/місяць</p>
                 <button>Підключити</button>
@@ -151,7 +152,7 @@
             <div class="internet">
                 <p class="taryf">Інтернет + Телебачення</p>
                 <p class="title">Швидкий + Преміум</p>
-                <p class="velocity">>100 Мбіт/с</p>
+                <p class="velocity">&gt;100 Мбіт/с</p>
                 <p class="old-price"><s>599 грн</s></p>
                 <p class="price">299 грн</p>
                 <button>Підключити</button>
@@ -159,7 +160,7 @@
             <div class="internet">
                 <p class="taryf">Інтернет + Телебачення</p>
                 <p class="title">Швидкий + HD</p>
-                <p class="velocity">>100 Мбіт/с</p>
+                <p class="velocity">&gt;100 Мбіт/с</p>
                 <p class="old-price"><s>599 грн</s></p>
                 <p class="price">299 грн</p>
                 <button>Підключити</button>
@@ -167,7 +168,7 @@
             <div class="internet">
                 <p class="taryf">Абонемент на інтернет-послуги</p>
                 <p class="title">Преміум на 6 місяців</p>
-                <p class="velocity">>100 Мбіт/с</p>
+                <p class="velocity">&gt;100 Мбіт/с</p>
                 <p class="old-price"><s>1199 грн</s></p>
                 <p class="price">799 грн</p>
                 <button>Підключити</button>

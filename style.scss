@@ -6,6 +6,7 @@ body {
 }
 
 header {
+  display: flex;
   text-align: center;
   ul {
     list-style: none;
@@ -64,7 +65,7 @@ main {
 
 }
 
-#intern, #tv {
+#intern, #tv{
   flex-wrap: wrap;
 }
 
@@ -74,6 +75,7 @@ main {
   width: 250px;
   height: auto;
   border-color: $primary-color;
+  background-color: aliceblue;
   justify-content: center;
   align-items: center;
   border: 1px solid $primary-color;
@@ -280,6 +282,7 @@ footer > * {
 
 @media only screen and (max-width: 768px) {
   header{
+    display: flex;
     flex-direction: column;
     min-width: 500px;
     height: 50px;
@@ -291,42 +294,44 @@ footer > * {
     .menu{
         display:none;
       }
-      .mobile-menu{
-        display: block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-    
-        .mobile-menu-list{
-            display: block;
-            list-style-type: none;
-            text-align: left;
-            text-decoration: none;
-            width: fit-content;
-            background-color: white;
-           li{
-                margin-bottom: 8px;
-                left: 20px;
-            }
-        }
-        
-      }
-      button{
-        background-color: lighten($primary-color, 50%);
-        width: 32px;
-        height: 32px;
-        border: none;
-        border-radius: 4px;
-      }
-
   }
   
-
   main img{
     max-width: 80%;
     height: auto;
   }
   #describtion{
     margin-left: 50px;
+  }
+
+
+  .mobile-menu{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+  }
+  .mobile-menu-list{
+     display: none;
+     list-style-type: none;
+     text-align: left;
+     left:0;
+     top: 0;
+     float: right;
+     text-decoration: none;
+     width: fit-content;
+     background-color: white;
+     cursor: pointer;
+     li{
+      margin-bottom: 8px;
+      }
+    }
+  button{
+    background-color: lighten($primary-color, 50%);
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
   }
 }
