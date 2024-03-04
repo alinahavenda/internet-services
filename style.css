@@ -61,7 +61,7 @@ main {
   flex-direction: row;
 }
 
-#intern, #tv {
+#intern, #tv, #discounts {
   flex-wrap: wrap;
 }
 
