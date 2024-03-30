@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опитування</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    header{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <header>
+        <img src="./image/logo.svg" width="300" height="60">
+        <ul>
+            <li><a href = "./index.html">Головна</a></li>
+            <li><a href = "./questionare.html">Опитування</a></li>
+        </ul>
+    </header>
+    <main>
+        <form id="questions-container">
+            <legend>Опитування</legend>
+            <fieldset id="question">
+                <label for="tel"><strong>1. Як часто ви дивитесь телебачення?</strong></label>
+                <input list="tels" id="tel" name="tel">
+                <datalist id="tels">
+                <option value="Щодня">
+                <option value="Раз на 2-3 дні">
+                <option value="Щотижня">
+                <option value="Декілька разів на місяць">
+                <option value="Не дивлюсь">
+                </datalist>
+            </fieldset>
+            <fieldset id="question">
+                <label><strong>2. Як саме ви користуєтесь телебаченням, через які пристрої?</strong></label>
+                <div id="checkbox">
+                    <input type="checkbox" id="tvdevice" name="tvdevice" value="Комп'ютер">
+                    <label for="checkbox">Через ноутбук, комп'ютер</label>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" id="tvdevice" name="tvdevice" value="Телевізор">
+                    <label for="checkbox">Впродовж дня</label>
+                </div>
+            </fieldset>
+            <fieldset id="question">
+                <label><strong>3. В який період доби ви зазвичай дивитесь телебачення?</strong></label>
+                <div id="checkbox">
+                    <input type="checkbox" id="tvtime" name="tvtime" value="Ввечері">
+                    <label for="checkbox">Ввечері</label>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" id="tvtime" name="tvtime" value="Впродовж дня">
+                    <label for="checkbox">Впродовж дня</label>
+                </div>
+            </fieldset>
+            <fieldset id="question">
+                <label><strong>4. Як у вас підключений інтернет?</strong></label>
+                <div id="checkbox">
+                    <input type="checkbox" id="how-internet" name="how-internet" value="WiFi роутер">
+                    <label for="checkbox">WiFi роутер</label>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" id="how-internet" name="how-internet" value="Кабель">
+                    <label for="checkbox">Кабель</label>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" id="how-internet" name="how-internet" value="Модем">
+                    <label for="checkbox">Модем</label>
+                </div>   
+            </fieldset>
+            <fieldset id="question">
+                <label><strong>5. Чому надаєте перевагу: мобільний інтернет чи WiFi?</strong></label>
+                <div id="radio">
+                    <input type="radio" id="radio-m" name="prefer" value="Мобільний інтернет">
+                    <label for="radio-m">Мобільний інтернет</label>
+                </div>
+                <div id="radio">
+                    <input type="radio" id="radio-w" name="prefer" value="WiFi">
+                    <label for="radio-w">WiFi</label>
+                </div>
+            </fieldset> 
+            <fieldset id="question">
+                <label><strong>6. Чи влаштовує вас якість телебачення? Оцініть від 1 до 10.</strong></label>
+                <input type="range" id="tv" name="tv" min="1" max="10">
+            </fieldset> 
+             <fieldset id="question">
+                <label><strong>7. Чи влаштовує вас якість інтернет-послуг? Оцініть від 1 до 10.</strong></label>
+                <input type="range" id="int" name="int" min="1" max="10">
+             </fieldset>
+            <fieldset id="question">
+                <label><strong>8. Який контент вам цікавіше переглядати?</strong></label>
+                <div id="checkbox">
+                    <input type="checkbox" id="content" name="content" value="Youtube">
+                    <label for="checkbox">Youtube</label>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" id="content" name="content" value="Фільми, кіно">
+                    <label for="checkbox">Фільми, кіно</label>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" id="content" name="content" value="Телепередачі">
+                    <label for="checkbox">Телепередачі</label>
+                </div>
+            </fieldset>
+            <fieldset id="question">
+                <label for="price"><strong>9. Яку суму ви готові витрачати на телебачення та інтернет щомісяця?</strong></label>
+                <label>Інтернет</label>
+                <select name="price-in" id="price-in">                
+                    <optgroup label="Інтернет">
+                        <option value="100">~100грн</option>
+                        <option value="100-200">100-200грн</option>
+                        <option value="200-300">200-300грн</option>
+                      </optgroup>
+                </select>
+                <label>Телебачення</label>
+                <select name="price-tv" id="price-tv"> 
+                    <optgroup label="Телебачення">
+                        <option value="100">~100грн</option>
+                        <option value="100-200">100-200грн</option>
+                        <option value="200-300">200-300грн</option>
+                      </optgroup>
+                </select>
+            </fieldset>
+            <fieldset id="question">
+                <label for="message"><strong>10. Якщо у вас є скарги на послуги, залиште їх тут, будь ласка. Вони обов'язково будуть розглянуті.</strong></label>
+                <textarea id="message" name="message" rows="4" cols="36"></textarea>
+            </fieldset>
+            <button type="submit" id="save-answer">Завершити опитування</button>
+        </form>
+
+        <h3>Статистика</h3>
+        <div id="statistic">
+            <button id="filter-frequency">Частота і період дня</button>
+            <button id="filter-content">Контент і якість</button>
+            <button id="filter-preference">Перевага і сума</button>
+        </div>
+        
+        <div id="result"></div>
+    </main>
+    <footer>
+        <img src="./image/logo.svg" width="300" height="60">
+        <ul>
+            <li><a href = "./index.html">Головна</a></li>
+            <li><a href = "./questionare.html">Опитування</a></li>
+        </ul>
+        <p>Ваш надійний провайдер.</p>
+        <p>2024</p>
+    </footer>
+</body>
+
+<script>
+    // Функція для збереження даних форми в Local Storage
+    function saveFormData() {
+        var formData = {
+            'tel': document.getElementById('tel').value,
+            'tvdevice': [],
+            'tvtime': [],
+            'how-internet': [],
+            'prefer': null,
+            'tv': document.getElementById('tv').value,
+            'int': document.getElementById('int').value,
+            'content': [],
+            'price-in': document.getElementById('price-in').value,
+            'price-tv': document.getElementById('price-tv').value,
+            'message': document.getElementById('message').value
+        };
+    
+        // Отримання значень чекбоксів
+        var tvdevices = document.getElementsByName('tvdevice');
+        for (var i = 0; i < tvdevices.length; i++) {
+            if (tvdevices[i].checked) {
+                formData['tvdevice'].push(tvdevices[i].value);
+            }
+        }
+    
+        var tvtimes = document.getElementsByName('tvtime');
+        for (var i = 0; i < tvtimes.length; i++) {
+            if (tvtimes[i].checked) {
+                formData['tvtime'].push(tvtimes[i].value);
+            }
+        }
+    
+        var howInternets = document.getElementsByName('how-internet');
+        for (var i = 0; i < howInternets.length; i++) {
+            if (howInternets[i].checked) {
+                formData['how-internet'].push(howInternets[i].value);
+            }
+        }
+    
+        // Отримання значення радіокнопок
+        var prefers = document.getElementsByName('prefer');
+        for (var i = 0; i < prefers.length; i++) {
+            if (prefers[i].checked) {
+                formData['prefer'] = prefers[i].value;
+                break;
+            }
+        }
+    
+        // Отримання значень пунктів вибору
+        var contents = document.getElementsByName('content');
+        for (var i = 0; i < contents.length; i++) {
+            if (contents[i].checked) {
+                formData['content'].push(contents[i].value);
+            }
+        }
+    
+        var savedData = JSON.parse(localStorage.getItem('allFormData')) || [];
+        savedData.push(formData);
+        localStorage.setItem('allFormData', JSON.stringify(savedData));
+        alert('Дані успішно збережено!');
+        }
+    
+    document.getElementById('save-answer').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        saveFormData(); 
+        
+        function showFrequencyAndTime() {
+                var allFormData = JSON.parse(localStorage.getItem('allFormData')) || [];
+                var telValues = [];
+                var tvTimeValues = [];
+
+                allFormData.forEach(function(formData) {
+                    telValues.push(formData.tel);
+                    tvTimeValues.push(formData.tvtime.join(', '));
+                });
+
+                document.getElementById('result').innerHTML = `<strong>Частота перегляду телебачення:</strong> ${telValues.join('<br>')}<br>
+                <strong>Період доби:</strong> ${tvTimeValues.join('<br>')}`;
+            }
+
+            function showContentAndQuality() {
+                var allFormData = JSON.parse(localStorage.getItem('allFormData')) || [];
+                var contentValues = [];
+                var tvQualityValues = [];
+
+                allFormData.forEach(function(formData) {
+                    contentValues.push(formData.content.join(', '));
+                    tvQualityValues.push(formData.tv);
+                });
+
+                document.getElementById('result').innerHTML = `<strong>Цікавий контент:</strong> ${contentValues.join('<br>')}<br>
+                <strong>Оцінка якості телебачення:</strong> ${tvQualityValues.join('<br>')}`;
+            }
+
+            function showPreferenceAndPrice() {
+                var allFormData = JSON.parse(localStorage.getItem('allFormData')) || [];
+                var preferValues = [];
+                var priceInValues = [];
+
+                allFormData.forEach(function(formData) {
+                    preferValues.push(formData.prefer);
+                    priceInValues.push(formData['price-in']);
+                });
+
+                document.getElementById('result').innerHTML = `<strong>Перевага:</strong> ${preferValues.join('<br>')}<br>
+                <strong>Готовність витратити на інтернет щомісяця:</strong> ${priceInValues.join('<br>')}`;
+            }
+            
+            document.getElementById('filter-frequency').addEventListener('click', function(event) {
+                showFrequencyAndTime();
+            });
+            
+            document.getElementById('filter-content').addEventListener('click', function(event) {
+                showContentAndQuality();
+            });
+            
+            document.getElementById('filter-preference').addEventListener('click', function(event) {
+                showPreferenceAndPrice();
+            });
+        });
+    </script>
+    
+    
+</html>
