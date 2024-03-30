@@ -1,0 +1,112 @@
+{
+    "test": {
+        "title": "Тест: Історія телебачення та інтернету",
+        "questions": [
+            {
+                "question": "Хто вважається 'батьком Інтернету'?",
+                "answers": [
+                    {
+                        "answer": "Тім Бернерс-Лі",
+                        "correct": true
+                    },
+                    {
+                        "answer": "Білл Гейтс",
+                        "correct": false
+                    },
+                    {
+                        "answer": "Стів Джобс",
+                        "correct": false
+                    },
+                    {
+                        "answer": "Марк Цукерберг",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "question": "У якому році відбулося перше успішне підключення до Інтернету?",
+                "answers": [
+                    {
+                        "answer": "1969",
+                        "correct": true
+                    },
+                    {
+                        "answer": "1989",
+                        "correct": false
+                    },
+                    {
+                        "answer": "1979",
+                        "correct": false
+                    },
+                    {
+                        "answer": "1999",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Що означає скорочення WWW у веб-адресах?",
+                "answers": [
+                    {
+                        "answer": "World Wide Web",
+                        "correct": true
+                    },
+                    {
+                        "answer": "World Wealthy Wares",
+                        "correct": false
+                    },
+                    {
+                        "answer": "World Wired Web",
+                        "correct": false
+                    },
+                    {
+                        "answer": "Wired Wide Web",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Яка компанія випустила перший комерційний телевізор у 1928 році?",
+                "answers": [
+                    {
+                        "answer": "Sony",
+                        "correct": false
+                    },
+                    {
+                        "answer": "RCA",
+                        "correct": true
+                    },
+                    {
+                        "answer": "Samsung",
+                        "correct": false
+                    },
+                    {
+                        "answer": "Panasonic",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Який супутник був першим, що транслював телепрограми на весь світ?",
+                "answers": [
+                    {
+                        "answer": "Супутник Спутнік",
+                        "correct": false
+                    },
+                    {
+                        "answer": "Телестар",
+                        "correct": true
+                    },
+                    {
+                        "answer": "Еко",
+                        "correct": false
+                    },
+                    {
+                        "answer": "Телеком",
+                        "correct": false
+                    }
+                ]
+            }
+        ]
+    }
+}
