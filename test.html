@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Історія телебачення та інтернету</title>
+</head>
+<style>
+#questions{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+body{
+    padding-left: 100px;
+}
+ul {
+    list-style-type: none;
+}
+button{
+    padding: 8px 12px;
+    color: white;
+    background-color: #0449B0;
+    border-radius: 4px;
+    border: none;
+}
+
+.correct {
+    border: 2px solid green;
+    border-radius: 4px;
+}
+
+.incorrect {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.question-container {
+    /* Тут ви можете вказати всі необхідні стилі для класу questionContainer */
+    background-color: aliceblue;
+    border: 1px solid #0449B0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    
+    p{
+        font-weight: bold;
+    }
+}
+p{
+    font-weight: bold;
+}
+
+
+</style>
+<body>
+    <h2>Тест: Історія телебачення та інтернету</h2>
+    <div id="questions"></div>
+    <button onclick="submitTest()">Завершити тест</button>
+    <div id="result"></div>
+
+    <script>
+        // Функція для завантаження JSON-файлу та відображення питань
+        function loadQuestions() {
+            fetch('test.json')
+                .then(response => response.json())
+                .then(data => {
+                    const questionsDiv = document.getElementById('questions');
+                    data.test.questions.forEach((question, index) => {
+                        const questionContainer = document.createElement('div');
+                        questionContainer.classList.add('question-container');
+                        questionContainer.innerHTML = `
+                            <p>${index + 1}. ${question.question}</p>
+                            <ul>
+                                ${question.answers.map(answer => `
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="question${index}" value="${answer.correct}">
+                                            ${answer.answer}
+                                        </label>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        `;
+                        questionsDiv.appendChild(questionContainer);
+                    });
+                });
+        }
+
+        // Функція для перевірки тесту та виведення результатів
+        function submitTest() {
+            const answers = document.querySelectorAll('input[type="radio"]:checked');
+            let score = 0;
+            answers.forEach(answer => {
+                if (answer.value === "true") {
+                    score++;
+                    answer.parentElement.parentElement.classList.add('correct');
+                }
+                else {
+                    answer.parentElement.parentElement.classList.add('incorrect');
+                }
+            });
+            const resultDiv = document.getElementById('result');
+            const percentage = ((score / answers.length) * 100).toFixed(0);
+            resultDiv.innerHTML = `<p>Ваш результат: ${score} з ${answers.length}, ${percentage}%</p>`;
+        }
+
+        // Запускаємо завантаження питань після повного завантаження сторінки
+        document.addEventListener('DOMContentLoaded', loadQuestions);
+    </script>
+</body>
+</html>
